@@ -1,0 +1,43 @@
+<div style="text-align:center">
+    <h1>{{ title }}</h1>
+  
+    <form (ngSubmit)="gerarCartaoDeVisitas()">
+      <label>Nome:</label>
+      <input [(ngModel)]="nome" name="nome" required><br>
+  
+      <label>Idade:</label>
+      <input type="number" [(ngModel)]="idade" name="idade" required><br>
+  
+      <label>Telefone:</label>
+      <input type="tel" [(ngModel)]="telefone" name="telefone" required><br>
+  
+      <label>E-mail:</label>
+      <input type="email" [(ngModel)]="email" name="email" required><br>
+  
+      <label>Endereço:</label>
+      <input [(ngModel)]="endereco" name="endereco" required><br>
+  
+      <label>Número:</label>
+      <input type="number" [(ngModel)]="numero" name="numero" required><br>
+  
+      <label>Bairro:</label>
+      <input [(ngModel)]="bairro" name="bairro" required><br>
+  
+      <label>Cidade:</label>
+      <input [(ngModel)]="cidade" name="cidade" required><br>
+  
+      <button type="submit">Gerar Cartão</button>
+    </form>
+  
+    <div *ngIf="mostrarCartao">
+      <h2>Cartão de Visitas</h2>
+      <p><strong>Nome:</strong> {{ nome }}</p>
+      <p><strong>Idade:</strong> {{ idade }}</p>
+      <p><strong>Telefone:</strong> {{ telefone }}</p>
+      <p><strong>E-mail:</strong> {{ email }}</p>
+      <p><strong>Endereço:</strong> {{ endereco }}</p>
+      <p><strong>Número:</strong> {{ numero }}</p>
+      <p><strong>Bairro:</strong> {{ bairro }}</p>
+      <p><strong>Cidade:</strong> {{ cidade }}</p>
+    </div>
+  </div>  
